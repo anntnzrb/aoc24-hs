@@ -2,7 +2,7 @@ module Main where
 
 import Data.List (sort, transpose)
 import Data.Text qualified as T
-import Data.Text.IO qualified as T
+import Data.Text.IO qualified as TIO
 import Text.Printf
 
 type LocationID = Int
@@ -28,5 +28,5 @@ solve = calcDistance
 
 main :: IO ()
 main = do
-    input <- parseInput <$> T.readFile "./inputs/day01.in"
+    input <- parseInput <$> TIO.readFile "./inputs/day01.in"
     printf "Part 1: %d\n" $ solve input
